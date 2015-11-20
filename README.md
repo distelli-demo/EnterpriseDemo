@@ -1,4 +1,4 @@
-# \\[._.]/ Presentation by Adam Eivy
+# \\[._.]/ Presentation by Peter Simkins
 
 ![vadar](http://media.giphy.com/media/EK9PSegUDgnba/giphy.gif)
 
