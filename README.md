@@ -2,13 +2,10 @@
 
 ![vadar](http://media.giphy.com/media/EK9PSegUDgnba/giphy.gif)
 
-> A [Bespoke.js](http://markdalgleish.com/projects/bespoke.js) presentation by Adam Eivy for a DTSS Learning Talk
 
 ## View the Slides
 
-The slides are hosted on [github pages](http://bit.ly/disney_bundler)
-
-or you can build the slides locally:
+Build the slides locally:
 
 First, ensure you have the following installed:
 
@@ -36,5 +33,3 @@ gulp deploy
 - if the screen is too bright or not bright enough, use `shift+up` and `shift+down`
 - press `r` when you are ready for rotational transitions
 
-
-![vs](http://media.giphy.com/media/Qw4X3FGPX1ui9rhWruM/giphy.gif)
