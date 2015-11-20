@@ -1,8 +1,5 @@
 # \\[._.]/ Presentation by Peter Simkins
 
-![vadar](http://media.giphy.com/media/EK9PSegUDgnba/giphy.gif)
-
-
 ## View the Slides
 
 Build the slides locally:
