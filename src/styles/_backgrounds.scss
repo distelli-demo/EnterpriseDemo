@@ -1,0 +1,103 @@
+
+@mixin background-gif($url, $position: 50% 50%, $darkness: 0.5, $blur: 0.5, $size: 5) {
+  background-color: black;
+  &::before {
+    content: '';
+    position: absolute;
+    height: 100% / $size;
+    width: 100% / $size;
+    background-size: cover;
+    background-image: url(#{$url});
+    background-position: $position;
+    transform-origin: 0 0;
+    transform: scale($size);
+    filter: blur($blur * 1px);
+    opacity: 1 - $darkness;
+  }
+}
+
+.fullscreen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.almost-fullscreen {
+  position: absolute;
+  top: 0;
+  left: 15%;
+  width: 70%;
+  height: 100%;
+}
+
+[ui-fx] {
+}
+[ui-fx~="blur1"] {
+  filter: blur(1px);
+}
+[ui-fx~="blur2"] {
+  filter: blur(2px);
+}
+[ui-fx~="dark50%"] {
+  opacity: 0.5;
+}
+[data-bespoke-step-nr="2"] [ui-fx~="arnie"] {
+  transition: all 10s;
+  filter: blur(1px) hue-rotate(-20deg) brightness(1.3) contrast(8);
+  transform: skew(0,25deg) scale(1.9);
+}
+[data-bespoke-step-nr="2"] [ui-fx~="glasses"] {
+  transition: -webkit-filter 3s;
+  filter: blur(2px) hue-rotate(180deg) brightness(1.1) contrast(2);
+}
+
+.gif-shocked {
+  @include background-gif('../images/shocked.gif');
+  //@include background-gif('http://i.imgur.com/HlwFoVG.gif');
+}
+
+.gif-skull-2 {
+  background: url('../images/an_spinning_flaming_skull.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.fact {
+  @include background-gif('../images/carl_sagan_good.gif',
+                          $darkness: 0.6, $blur: 0, $size: 1)
+}
+
+.not-sure-if-right {
+  //@include background-gif('http://media.giphy.com/media/Br5rWtM1QiYBa/giphy.gif')
+  @include background-gif('../images/shaking_head_breaking_bad.gif',
+                          $position: 80% 0%, $blur: 0, $size: 1)
+}
+.black {
+  background-color: black;
+}
+
+.light {
+  background-color: #001F3F;
+}
+
+.white {
+  background-color: #fff;
+}
+
+.yeahnah {
+  @include background-gif("../images/yeahnah.gif", $darkness: 0, $blur: 0.5, $position: 100% 50%);
+}
+
+.yep {
+  @include background-gif("../images/yep.gif", $darkness: 0, $blur: 0.5);
+}
+
+.ticked {
+  @include background-gif("../images/ticked.gif");
+}
+
+.homescreen {
+  @include background-gif("/images/mtnwest.gif");
+}

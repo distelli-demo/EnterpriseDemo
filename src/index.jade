@@ -1,0 +1,191 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    title OneID Bundler and CDN
+
+    link(rel='stylesheet', type='text/css', href='styles/styles.css')
+    script.
+      if ('registerElement' in document
+        && 'createShadowRoot' in HTMLElement.prototype
+        && 'import' in document.createElement('link')
+        && 'content' in document.createElement('template')) {
+        // We're using a browser with native WC support!
+      } else {
+        document.write('<script src="x-gif/dist/platform.js"><\/script>')
+      }
+
+  body
+    article
+      section(data-bespoke-hash="intro")
+        .fullscreen(ui-fx="blur1")
+            x-gif(src="images/disney_intro_tron.gif" fill stopped ping-pong speed="1")
+        .content#intro
+            .box
+                h2: small OneID Bundler & CDN
+                .mid by
+                h4: small Adam Eivy <span class="rotate">\[._.]/</span>
+                    .me.center
+                br
+                audio#audio(controls,loop)
+                    source(src="https://archive.org/download/DaftPunkTronLegacyEncomPartIi/DaftPunkTronLegacyEncomPartIi.ogg" type="audio/ogg")
+                    source(src="https://archive.org/download/DaftPunkTronLegacyEncomPartIi/DaftPunkTronLegacyEncomPartIi.mp3" type="audio/mpeg")
+
+      section(data-bespoke-hash="allok")
+        .fullscreen
+          x-gif(src="images/mickey_dance.gif" fill stopped speed=0.8 n-times=3)
+        .content.wait-for-gif.darken
+          h1 everything's fine
+
+      section.content
+        h2 ESPN Numbers
+        h3: code.language-bash.
+          Peak: 157,000 Page Loads Per Second
+        h3.grow ¯\_(ツ)_/¯
+
+      section
+        .fullscreen(ui-fx="blur1")
+          x-gif(src="images/eraserhead.gif" fill stopped)
+
+      section.content
+        h3 Page Loads...
+        h4: small: code.language-bash.
+          TPS = Page Loads * (Page Assets + API Requests)
+        h3 \[o_9]/
+        h2 ~1 Million TPS Peak
+
+      section.content
+        h2 OneID UI
+        ul
+          li DisneyID.js (outer JS)
+          li HTML
+          li JavaScript Library (inner)
+          li CSS (Base + Client Override)
+          li Localization text
+          li Client Site Config
+
+      section.content
+        h3 We can just scale the servers
+        h4 right?
+
+      section
+        .fullscreen
+          x-gif(src="images/laugh_donald.gif" fill stopped n-times=1)
+        .content.wait-for-gif.darken
+          h1 $$$
+
+      section.content
+        ul
+            li
+              b.alert.alert-info NewRelic
+              | &nbsp; ~86 Billion/Day  &nbsp;
+              b.alert.alert-danger.rotate $112K/day
+            li
+              b.alert.alert-info Site Config
+              | &nbsp; 350 GCv2 servers &nbsp;
+              b.alert.alert-danger.rotate $82K/month
+
+      section.fullscreen
+        x-gif(src="images/no.gif" fill stopped)
+
+      section.content
+        h3 CDN Cache
+        h4: code.language-bash.
+          This is all static, public, cachable
+        h3 \[^_^]/
+
+      section.content
+        h3 What About the User?
+        h4 HTTP/1.1 requests are heavy
+
+      section.content
+          h1 HTTP/2
+          x-gif(src="images/unicorn_3.gif" stopped)
+
+      section.content
+          img(src="images/http2.png")
+
+      section.fullscreen
+        img.fillh(src="images/concatenate.jpg")
+        .content
+          .box
+            h4 Concatenate all the things
+
+      section.content
+        img(src="images/oneid_html_bundle.png")
+
+      section.content
+        h2 Is that big?
+        h4: code.language-css ~180KB (depending on client)
+
+
+      section.content
+        img(src="images/disney_id_no_bundler.png")
+
+      section.content
+        img(src="images/disney_id_bundler.png")
+
+      section.content
+        img(src="images/2cdns.png")
+
+      section.content
+        h2 \(• ◡ •)/ Added Benefits
+        ul
+            li No more delay in CSS override
+            li No more l10n fillers
+
+      section.fullscreen
+        x-gif(src="images/perfect_x-wings.gif" fill stopped)
+
+      section.content
+        h2 Live Traffic Results
+        ul
+            li Akamai offloading 99.8% (13.3 TB/day)
+            li IE9 traffic (1%) is still 2.28 Million hits/day
+            li A few bumps...
+
+      section.fullscreen
+        img(src="images/akamai_offload.png")
+
+      section.fullscreen
+        img(src="images/non_cdn.png")
+        .content
+          .box
+            h4 (use the CDN)
+
+      section.fullscreen
+        img.fillh(src="images/newrelic_good.png")
+
+      section.fullscreen
+        img(src="images/ie9_traffic.jpg")
+        .content
+          .box
+            h2 ie9.css
+            pre
+              code.language-css.
+                .field select{background-image:none;padding-right:0;}
+                .field .name{display:block;}
+                .field .toggle .name{display:inline-block;}
+
+      section
+        .fullscreen(ui-fx="blur1")
+          x-gif(src="images/applause.gif" fill ping-pong speed="0.6" stopped)
+        .content(data-bespoke-state='light')
+          div.box.darken
+            .mid Thanks!
+            .line
+              .me.center
+            h4 \[._.]/ Adam Eivy
+            h6 slides:
+              a(href='http://bit.ly/disney_bundler') &nbsp; bit.ly/disney_bundler
+            h6 docs:
+              a(href='http://bit.ly/disney_bundlerdocs') &nbsp; bit.ly/disney_bundlerdocs
+            h6 cost:
+              a(href='http://bit.ly/disney_cdncost') &nbsp; bit.ly/disney_cdncost
+            h6 NewRelic Logs:
+              a(href='http://bit.ly/disney_nr_bundler') &nbsp; bit.ly/disney_nr_bundler
+            small: a(href='#1') &nbsp; restart
+
+    script(src='scripts/scripts.js')
+    link(rel="import" href="x-gif/dist/x-gif.html")

@@ -1,0 +1,21 @@
+{
+  "name": "presentation-adameivy",
+  "version": "0.0.0",
+  "dependencies": {
+    "bespoke-hash": "~1.0.2",
+    "bespoke-keys": "~0.1.0",
+    "bespoke-scale": "~0.2.0",
+    "bespoke-state": "~0.2.0",
+    "bespoke-touch": "~0.1.0",
+    "bespoke.js": "~0.4.0",
+    "prism": "gh-pages",
+    "x-gif": "~0.1.1"
+  },
+  "devDependencies": {
+    "bespoke-bullets": "~0.2.1"
+  },
+  "resolutions": {
+    "bespoke.js": "~0.4.0",
+    "bespoke-hash": "~0.1.0"
+  }
+}
